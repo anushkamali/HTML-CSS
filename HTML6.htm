@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>videoExample</title>
+</head>
+<body>
+<div style="text-align:center">
+<button onclick="playpause()">Play/Pause</button>
+<button onclick="normalsize()">Normal</button>
+<button onclick="bigsize()">Big</button>
+<br><br>
+<video id="myvid" width="500" height="300">
+<source src="/home/dell/Downloads/The Man Who Killed Millions and Saved Billions.mp4" type="video/mp4">
+You browser does not support videos!
+</video>
+</div>
+
+<script>
+var myVideo = document.getElementById("myvid");
+
+function playpause(){
+if (myVideo.paused)
+myVideo.play();
+else
+myVideo.pause();
+}
+function normalsize(){
+myVideo.width = 500;
+myVideo.height = 300;
+}
+function bigsize(){
+myVideo.width = 700;
+myVideo.height = 500;
+}
+</script>
+
+</body>
+</html>
