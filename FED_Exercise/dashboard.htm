@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Org|Dashboard</title>
+<link rel="stylesheet" href="dashboard.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito Sans">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<style>
+* {
+box-sizing: border-box;
+font-family: "Nunito Sans";
+}
+
+body {
+ margin:0; 
+ background-color:#F1F1F1;
+}
+
+.drop {
+width:20px;
+height:20px;
+position:absolute;
+right:35px;
+top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="exit">
+
+<div class="profile"></div>
+
+<div id="dropdown_content">
+    <a href="rem_me.htm"><span class="glyphicon">&#xe163;</span> Logout</a>
+</div>
+<button style="background-color:white; border-color:white;" class="drop" onclick="openDropdown()">
+<i class="fa fa-caret-down"></i>
+</button>
+
+</div>
+
+<script>
+function openDropdown() {
+  document.getElemetById("dropdown_content").style.display = "block";
+}
+</script>
+
+<div id="nav">
+<a href="status.htm" style="top:60px;" target="iframe_1">Dashboard <span style="float:right;"><i class="fa fa-home"></span></i></a>
+<hr color="#92A9BD" width="20px">
+<a href="catalog.htm" style="top:110px;" target="iframe_1">Products Catalog <span style="float:right;"><i class="material-icons" style="font-size:15px">&#xe53b;</i></span></i></a>
+</div>
+<button class="logo" onclick ="openNav()"></button>
+
+<iframe src="status.htm" name="iframe_1" style="position:absolute; right:0; bottom:0; margin: 5px; height:900px; width:78%; border:none;" title="window_1"></iframe>
+
+<script>
+
+function openNav() {
+ if ( document.getElementById("nav").style.display == "block") {
+ document.getElementById("nav").style.display = "none";
+}
+ else {
+ document.getElementById("nav").style.display = "block";
+}
+}
+
+</script>
+
+</body>
+</html>

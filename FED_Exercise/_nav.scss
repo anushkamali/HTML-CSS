@@ -1,0 +1,39 @@
+#nav {
+
+display: block;
+background-color:white;
+width:20%;
+height:100%;
+position: absolute;
+z-index:-1;
+
+a {
+width: 100%;
+display:block;
+padding: 15px;
+height: 50px;
+position: absolute;
+color: gray;
+background-color: white;
+text-align:left;
+text-decoration:none;
+border-style: none;
+font-size: 15px;
+
+ &:active, &:focus {
+ background-color:#DFF6FF;
+ border-left: 3px solid #47B5FF; 
+ }
+}
+
+}
+
+.logo {
+ width: 20%;
+ height: 50px;
+ background-color: black;
+ background-image: url("rp-logo.png");
+ background-position:center;
+ background-repeat: no-repeat;
+ background-size: auto;
+}

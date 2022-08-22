@@ -1,0 +1,95 @@
+@import 'grid'; 
+
+.container {
+ display:flex;
+ flex-flow: row wrap;
+}
+
+.new {
+width:0;
+height:0;
+border-style:solid;
+border-width: 0 50px 50px 50px;
+border-color:red transparent transparent red;
+position:absolute;
+}
+
+.newtext {
+color:white;
+font-size:10px;
+transform: rotate(315deg);
+position:absolute;
+top:25px;
+left:15px;
+margin:0;
+padding:0;
+}
+
+@mixin product {
+@include grid(3,3%);
+position:relative;
+padding: 10px;
+box-sizing:border-box;
+background-color:white;
+border-radius:5px;
+border: 1px solid #F1F1F1;
+
+img {
+width:100%;
+height:auto;
+border-bottom: 1px solid #F1F1F1;
+}
+
+h2 {
+color:grey;
+font-size:16px;
+span {
+font-size:26px;
+color:#2B4865;
+float:right;
+}
+}
+
+p {
+ span { 
+  border: 1px solid #F1F1F1;
+  padding: 3px;
+  border-radius:8px;
+  width:10px;
+  text-align:center;
+  margin: 5px;
+  font-size:15px;
+}
+ del {
+ font-size:16px;
+ color:grey;
+ float:right;
+ }
+}
+
+h6 {
+font-size: 13px;
+font-style:italic;
+font-weight:normal;
+margin:0;
+padding:0;
+}
+
+}
+
+.elliot {
+@include product;
+}
+
+.maxtor {
+@include product;
+}
+
+.align {
+@include product;
+}
+
+.manroad {
+@include product;
+}
+

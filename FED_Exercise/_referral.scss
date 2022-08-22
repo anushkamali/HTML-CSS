@@ -1,0 +1,35 @@
+@mixin reftable {
+ background-color:white;
+ width:100%;
+ margin:2%;
+ box-sizing:border-box;
+ padding:20px 20px 30px 20px;
+ border-radius:5px;
+ 
+ h1 {
+  font-weight:bold;
+  font-size:16px;
+ }
+ 
+ p {
+  color:grey;
+ }
+ 
+ table {
+ border-collapse:collapse;
+ width:100%;
+ }
+ th, td {
+ padding:8px;
+ text-align:left;
+ border-top:1px solid #ddd;
+ font-size:13px;
+ }
+ th {
+ background-color:#ddd;
+ }
+}
+
+.referral {
+ @include reftable;
+}

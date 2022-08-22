@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito Sans">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Org|Login
+</title>
+
+<style>
+
+body{
+  font-family: "Nunito Sans";
+  box-sizing:border-box;
+  background-image: url('login-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+margin-top: 20px;
+margin-left:20px;
+height: auto;
+}
+
+div.info {
+ margin: 4% 28% 2%;
+ color: white;
+ text-align: center;
+
+}
+
+div.formbox {
+ margin: 0 35% 2.6%;
+ box-sizing:border-box;
+ background-color: white;
+ padding: 20px;
+ border-radius: 10px;
+}
+
+form {
+  padding: 30px 25px 20px 10px;
+  max-width:100%;
+  
+}
+
+input {
+  font-size: 18px;
+  padding: 5px;
+  border-radius:3px;
+  display:block;
+  border: 1px solid #F1F1F1;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width:auto;
+}
+
+input[type="text"] {
+  width:100%;
+}
+
+input[type="password"] {
+  width:100%;
+}
+
+input[type="submit"] {
+  box-sizing:border-box;
+  background-color: #3B9AE1;
+  border:none;
+  color:white;
+  font-size:20px;
+  text-align:center;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+label {
+  box-sizing:border-box;
+  color:#2A0944;
+  font-size:16px;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .info, .formbox {
+  width: 100%;
+ }
+</style>
+
+</head>
+
+<body>
+
+<img src="rp-logo.png" alt="rp-logo"> 
+
+
+<div class="info">
+
+<b><h1 style= "max-width:100%; font-size:35px; font-weight:bold;"><b>WELCOME TO REDPANDA UI HTML - CSS BASIC FED TEMPLATE</b></h1>
+<p style = "font-size:16px; max-width:100%;">The Red Pandas is a team of programatic engineers who care deeply about the quality of their products and the success of their partners. Over the years, we have mastered best practices in building software products from concept to scale and we continue to learn emerging technologies. <br><br></p></b>
+
+</div>
+
+<div class="formbox">
+
+<h2 style ="font-size: 20px;"><b>PLEASE LOG IN</b></h2>
+
+<form action="dashboard.htm">
+<label for="username">Username</label><br>
+<input type="text" id="username" name="user" autocomplete="off"><br>
+<label for="password">Password</label><br>
+<input type="password" id="password" name="pswd"><br>
+<input type="checkbox" id="check" name="check" value="lsRememberMe">
+<label for="check">Remember me</label><br><br>
+<hr color=#F1F1F1>
+<br>
+<input type="submit" value="Sign in" onclick="lsRememberMe()">
+</form>
+
+</div>
+
+<script>
+const rmCheck = document.getElementById("check"), userinp = document.getElementById("username"), userpass = document.getElementById("password");
+
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked","checked");
+  userinp.value = localStorage.username;
+  userpass.value = localStorage.password;
+}
+else {
+  rmCheck.removeAttribute("checked");
+  userinp.value = "";
+  userpass.value = "";
+}
+
+function lsRememberMe() {
+ if (rmCheck.checked && userinp.value !== "") {
+   localStorage.username = userinp.value;
+   localStorage.checkbox = rmCheck.value;
+   localStorage.password = userpass.value;
+ }
+ else {
+   localStorage.username = "";
+   localStorage.userpass = "";
+   localStorage.checkbox = "";
+ }
+}
+</script>
+
+<footer style="color:white; text-align:center; margin-top:5%;"> 
+<p>&copy; 2020 RedPanda. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>

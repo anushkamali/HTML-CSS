@@ -1,0 +1,36 @@
+@mixin footerinfo {
+background-color:#CFD2CF;
+color:#383838;
+margin:0;
+border-radius:5px;
+padding:4% 2% 8% 5%;
+font-size:15px;
+width:100%;
+h6 {
+font-weight:bolder;
+font-size:15px;
+}
+p {
+padding:0 30% 0 0;
+}
+}
+
+.footerinfo {
+@include footerinfo;
+}
+
+.upbutton {
+background-color:grey;
+border-radius:10px;
+padding:5px;
+margin:0;
+float:right;
+ a {
+ color:white;
+ text-decoration:none;
+ 
+ &:hover, &:active {
+ text-decoration:none;
+ }
+ }
+}

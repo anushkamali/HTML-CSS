@@ -1,0 +1,59 @@
+@import 'grid';
+
+@mixin proginfo($val:blue) {
+padding: 10px;
+box-sizing:border-box;
+background-color:white;
+border-radius:5px;
+@include grid(2,2%);
+
+.proginfo-content {
+ width:100%;
+ div {
+ font-size:14px;
+ }
+ h4 {
+ font-size:15px;
+ span {
+ color: $val;
+ font-weight:bold;
+ float:right;
+ font-size:23px;
+ }
+ }
+ progress {
+ width:100%;
+ accent-color: $val;
+ }
+ p {
+ color:gray;
+ font-size:14px;
+ span {
+ float:right;
+ }
+ }
+ 
+}
+}
+
+.flex-container {
+display:flex;
+flex-direction: row;
+flex-wrap:wrap;
+}
+
+.profit {
+@include proginfo;
+}
+
+.feedback {
+@include proginfo($val:green);
+}
+
+.orders {
+@include proginfo($val:red);
+}
+
+.users {
+@include proginfo($val:gray);
+}

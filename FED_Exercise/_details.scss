@@ -1,0 +1,204 @@
+@import 'grid'; 
+
+.details {
+width:100%;
+background-color:white;
+padding:1%;
+margin:0;
+border-radius:8px;
+position:relative;
+top:10%;
+box-sizing:border-box;
+display:flex;
+flex-flow:row wrap;
+
+h1 {
+font-weight:bold;
+font-size:16px;
+width:100%;
+padding:1%;
+margin:0;
+}
+}
+
+.images {
+  width:30%;
+  float:left;
+  padding:1%;
+  margin:0;
+}
+
+@mixin productimg {
+ width:100%;
+ border:1px solid #EEEEEE;
+ padding:5px;
+ border-radius:5px;
+ 
+ img {
+  width:100%;
+  height:auto;
+ }
+ 
+}
+
+@mixin productgrid {
+ width:100%;
+ padding:10px;
+ margin:0;
+ display:flex;
+ flex-flow:row wrap; 
+ 
+ img {
+  @include grid(3,2%);
+ }
+}
+
+.elliotimggrid {
+@include productgrid;
+}
+
+.elliotimg {
+ @include productimg;
+ position:relative;
+}
+
+.new {
+width:0;
+height:0;
+border-style:solid;
+border-width: 0 50px 50px 50px;
+border-color:red transparent transparent red;
+position:absolute;
+}
+
+.newtext {
+color:white;
+font-size:10px;
+transform: rotate(315deg);
+position:absolute;
+top:18px;
+left:13px;
+margin:0;
+padding:0;
+}
+
+
+.info {
+  width:70%;
+  float:left;
+  padding:1%;
+  margin:0;
+}
+
+@mixin tags {
+background-color:#DDDDDD;
+padding:1% 3%;
+margin-left:1%;
+text-align:center;
+color: grey; 
+font-size:14px;
+font-weight:bold;
+}
+
+.tags {
+display:flex;
+flex-flow:row wrap;
+padding:0;
+margin:0;
+}
+
+.tag {
+@include tags;
+position:relative;
+}
+
+.triright {
+width:0;
+height:0;
+border-style:solid;
+border-width:0 0 40px 10px; 
+border-color:transparent white white transparent;
+position:absolute;
+right:0;
+bottom:0;
+}
+
+.trileft {
+width:0;
+height:0;
+border-style:solid;
+border-width: 40px 10px 0 0; 
+border-color:white transparent transparent white;
+position:absolute;
+left:0;
+top:0;
+}
+
+.sizes {
+span {
+border: 1px solid #F1F1F1;
+  padding: 3px;
+  border-radius:8px;
+  width:10px;
+  text-align:center;
+  margin: 5px 5px 5px 0;
+  font-size:15px;
+}
+}
+
+.about {
+display:flex;
+width:100%;
+flex-flow:row wrap;
+margin:10px 10px 10px 0;
+border-bottom:1px solid #EEEEEE;
+}
+
+@mixin abouttabs {
+
+a {
+width:auto;
+height:auto;
+float:left;
+padding:10px;
+margin:0;
+background-color: white;
+border-style: none;
+font-size: 15px;
+text-align:center;
+background-color:white;
+color:grey;
+text-decoration:none;
+
+&:active, &:focus {
+ border-bottom: 3px solid #47B5FF; 
+ color:black;
+ text-decoration:none;
+ }
+ 
+&:hover {
+ text-decoration:none;
+}
+ }
+}
+
+.aboutinfo {
+@include abouttabs;
+}
+
+.aboutdescrip {
+@include abouttabs;
+}
+
+#inforead {
+width:100%;
+display:none;
+color:#112B3C;
+}
+
+#descripread {
+justify-content: space-evenly;
+color:#112B3C;
+width:100%;
+display:block;
+}
